@@ -15,7 +15,7 @@ QML_FILES += \
 
 INCLUDEPATH += $$PWD
 
-CONFIG += no_cxx_module
+CONFIG += no_cxx_module fluid_resource_icons
 load(qml_plugin)
 
 contains(CONFIG, fluid_resource_icons) {
