@@ -7,6 +7,10 @@ QML_FILES += \
 
 load(qml_module)
 
+INSTALLS -= qmldir
+
+android:equals(QMAKE_HOST.os, Windows):QMAKE_MOVE = cmd /c move
+
 # Copy all files to the build directory so that QtCreator will recognize
 # the QML module and the demo will run without installation
 qmlfiles2build.files = $$QML_FILES

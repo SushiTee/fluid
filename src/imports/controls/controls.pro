@@ -18,6 +18,10 @@ INCLUDEPATH += $$PWD
 CONFIG += no_cxx_module fluid_resource_icons
 load(qml_plugin)
 
+INSTALLS -= target qmldir
+
+android:equals(QMAKE_HOST.os, Windows):QMAKE_MOVE = cmd /c move
+
 contains(CONFIG, fluid_resource_icons) {
     DEFINES += FLUID_INSTALL_ICONS=0
     RESOURCES += icons.qrc
