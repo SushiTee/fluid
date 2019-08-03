@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10.0)
 
 project("Fluid"
-    VERSION "1.1.0"
+    VERSION "1.2.0"
     DESCRIPTION "Material Design implementation with QtQuick Controls 2"
     LANGUAGES CXX C
 )
@@ -25,15 +25,17 @@ include(LiriSetup)
 
 ## Features:
 option(FLUID_USE_SYSTEM_LCS "Use system-wide LiriCMakeShared" OFF)
-add_feature_info("Fluid LCS" FLUID_USE_SYSTEM_LCS "Use system-wide LiriCMakeShared")
+add_feature_info("Fluid::LiriCMakeShared" FLUID_USE_SYSTEM_LCS "Use system-wide LiriCMakeShared")
 option(FLUID_WITH_DOCUMENTATION "Build documentation" ON)
-add_feature_info("Fluid Documentation" FLUID_WITH_DOCUMENTATION "Build Fluid documentation")
+add_feature_info("Fluid::Documentation" FLUID_WITH_DOCUMENTATION "Build Fluid documentation")
 option(FLUID_WITH_DEMO "Build demo application" ON)
-add_feature_info("Fluid Demo application" FLUID_WITH_DEMO "Build Fluid demo application")
+add_feature_info("Fluid::Demo" FLUID_WITH_DEMO "Build Fluid demo application")
 option(FLUID_WITH_QML_MODULES "Build QML modules" ON)
-add_feature_info("Fluid QML modules" FLUID_WITH_QML_MODULES "Build Fluid QML modules")
+add_feature_info("Fluid::QMLModules" FLUID_WITH_QML_MODULES "Build Fluid QML modules")
 option(FLUID_INSTALL_ICONS "Install Material Design icons" ON)
-add_feature_info("Material Design icons" FLUID_INSTALL_ICONS "Install Material Design icons")
+add_feature_info("Fluid::Icons" FLUID_INSTALL_ICONS "Install Material Design icons")
+option(FLUID_ENABLE_QTQUICK_COMPILER "Build with QtQuick compiler (resulting binaries may not be compatible with future Qt releases without rebuilding them)" OFF)
+add_feature_info("Fluid::QtQuickCompiler" FLUID_ENABLE_QTQUICK_COMPILER "Build with QtQuick compiler")
 
 ## Find Qt 5:
 find_package(Qt5 "${QT_MIN_VERSION}"

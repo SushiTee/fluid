@@ -5,7 +5,6 @@ Fluid
 [![GitHub release](https://img.shields.io/github/release/lirios/fluid.svg)](https://github.com/lirios/fluid)
 [![Build Status](https://travis-ci.org/lirios/fluid.svg?branch=develop)](https://travis-ci.org/lirios/fluid)
 [![GitHub issues](https://img.shields.io/github/issues/lirios/fluid.svg)](https://github.com/lirios/fluid/issues)
-[![Maintained](https://img.shields.io/maintenance/yes/2018.svg)](https://github.com/lirios/fluid/commits/develop)
 
 Fluid is a collection of cross-platform QtQuick components for building fluid and dynamic applications,
 using the [Material Design](https://material.io/guidelines/) guidelines.
@@ -29,6 +28,10 @@ Qt >= 5.10.0 with at least the following modules is required:
  * [qtgraphicaleffects](http://code.qt.io/cgit/qt/qtgraphicaleffects.git)
  * [qtsvg](http://code.qt.io/cgit/qt/qtsvg.git)
  * [qtdoc](http://code.qt.io/cgit/qt/qtdoc.git)
+
+On Linux you also need:
+
+ * [qtwayland](http://code.qt.io/cgit/qt/qtwayland.git)
 
 The following modules and their dependencies are required:
 
