@@ -19,7 +19,7 @@ INCLUDEPATH += $$PWD
 CONFIG += no_cxx_module
 load(qml_plugin)
 
-INSTALLS -= target qmldir
+INSTALLS -= target qmldir qmlfiles
 
 android:equals(QMAKE_HOST.os, Windows):QMAKE_MOVE = cmd /c move
 

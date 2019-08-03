@@ -7,7 +7,7 @@ QML_FILES += \
 
 load(qml_module)
 
-INSTALLS -= qmldir
+INSTALLS -= qmldir qmlfiles
 
 android:equals(QMAKE_HOST.os, Windows):QMAKE_MOVE = cmd /c move
 
